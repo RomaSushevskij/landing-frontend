@@ -2,17 +2,17 @@ import React, { ButtonHTMLAttributes, DetailedHTMLProps, memo } from 'react';
 
 import style from './Button.module.scss';
 
-import { ReturnComponentType } from 'types';
+import { ReturnComponent } from 'types';
 
-type DefaultButtonPropsType = DetailedHTMLProps<
+type DefaultButtonProps = DetailedHTMLProps<
   ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
 >;
 
-type SuperButtonPropsType = DefaultButtonPropsType;
+type ButtonProps = DefaultButtonProps;
 
 export const Button = memo(
-  ({ type, className, ...restProps }: SuperButtonPropsType): ReturnComponentType => {
+  ({ type, className, ...restProps }: ButtonProps): ReturnComponent => {
     const finalClassName = `${style.default} ${className}`;
 
     return (
