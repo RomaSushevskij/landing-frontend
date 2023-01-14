@@ -1,0 +1,10 @@
+@import "src/styles/variables";
+
+.heading {
+  font-family: $mainFontFamily;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 120%;
+  color: $mainTextColor;
+
+}

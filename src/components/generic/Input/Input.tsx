@@ -1,27 +1,9 @@
-import React, {
-  ChangeEvent,
-  DetailedHTMLProps,
-  InputHTMLAttributes,
-  KeyboardEvent,
-  memo,
-} from 'react';
+import React, { ChangeEvent, KeyboardEvent, memo } from 'react';
 
 import style from './Input.module.scss';
+import { InputTextProps } from './types';
 
 import { ReturnComponent } from 'types';
-
-type DefaultInputProps = DetailedHTMLProps<
-  InputHTMLAttributes<HTMLInputElement>,
-  HTMLInputElement
->;
-
-type InputTextProps = DefaultInputProps & {
-  onChangeText?: (value: string) => void;
-  onEnter?: () => void;
-  error?: string;
-  spanClassName?: string;
-  customStyle?: string;
-};
 
 export const Input = memo(
   ({
