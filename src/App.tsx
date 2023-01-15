@@ -10,11 +10,12 @@ import vue from 'assets/images/technologies/vue.png';
 import { Button } from 'components/generic/Button';
 import { Heading } from 'components/generic/Heading';
 import { Input } from 'components/generic/Input';
+import { Paragraph } from 'components/generic/Paragraph';
 
 import style from './App.module.scss';
 
-import { Paragraph } from 'components/generic/Paragraph';
 import { MentorCard } from 'components/MentorCard';
+import { StepCard } from 'components/StepCard';
 import { TechnologyCard } from 'components/TechnologyCard';
 import { ReturnComponent } from 'types';
 
@@ -63,6 +64,28 @@ const App = (): ReturnComponent => {
         <TechnologyCard title="React" logo={react} />
         <TechnologyCard title="Vue.js" logo={vue} />
         <TechnologyCard title="JavaScript" logo={js} />
+      </div>
+      <div
+        style={{
+          marginTop: 50,
+          paddingBottom: 50,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 30,
+        }}
+      >
+        <StepCard
+          stepNumber={1}
+          title="Introduction to Front-End"
+          description="Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis."
+          sideFrame="right"
+        />
+        <StepCard
+          stepNumber={2}
+          title="Overview of Development"
+          description="Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis."
+          sideFrame="left"
+        />
       </div>
     </div>
   );

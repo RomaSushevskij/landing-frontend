@@ -1,3 +1,5 @@
+@import "src/styles/mixins";
+
 .mentorCardWrapper {
   width: 188px;
 
@@ -6,8 +8,7 @@
     margin-bottom: 4px;
 
     .mentorName {
-      font-weight: 500;
-      font-size: 24px;
+      @include headingH4();
     }
   }
 

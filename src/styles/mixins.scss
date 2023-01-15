@@ -1,0 +1,19 @@
+@mixin headingH1 {
+  font-weight: 600;
+  font-size: 150px;
+}
+
+@mixin headingH2 {
+  font-weight: 600;
+  font-size: 72px;
+}
+
+@mixin headingH3 {
+  font-weight: 600;
+  font-size: 32px;
+}
+
+@mixin headingH4 {
+  font-weight: 500;
+  font-size: 24px;
+}
