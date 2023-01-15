@@ -3,14 +3,19 @@ import React from 'react';
 import KristinWatson from 'assets/images/mentors/KristinWatson.png';
 import RobertFox from 'assets/images/mentors/RobertFox.png';
 import WadeWarren from 'assets/images/mentors/WadeWarren.png';
+import angular from 'assets/images/technologies/angular.png';
+import js from 'assets/images/technologies/js.png';
+import react from 'assets/images/technologies/react.png';
+import vue from 'assets/images/technologies/vue.png';
 import { Button } from 'components/generic/Button';
 import { Heading } from 'components/generic/Heading';
+import { Input } from 'components/generic/Input';
 
 import style from './App.module.scss';
 
-import { Input } from 'components/generic/Input';
 import { Paragraph } from 'components/generic/Paragraph';
 import { MentorCard } from 'components/MentorCard';
+import { TechnologyCard } from 'components/TechnologyCard';
 import { ReturnComponent } from 'types';
 
 const App = (): ReturnComponent => {
@@ -52,6 +57,12 @@ const App = (): ReturnComponent => {
           description="Front-end engineers work closely with designers"
           customImageStyle={style.robertFoxImage}
         />
+      </div>
+      <div style={{ marginTop: 50, display: 'flex', gap: 30 }}>
+        <TechnologyCard title="Angular" logo={angular} />
+        <TechnologyCard title="React" logo={react} />
+        <TechnologyCard title="Vue.js" logo={vue} />
+        <TechnologyCard title="JavaScript" logo={js} />
       </div>
     </div>
   );
