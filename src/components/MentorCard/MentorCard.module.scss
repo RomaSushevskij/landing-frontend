@@ -1,0 +1,17 @@
+.mentorCardWrapper {
+  width: 188px;
+
+  .name {
+    margin-top: 16px;
+    margin-bottom: 4px;
+
+    .mentorName {
+      font-weight: 500;
+      font-size: 24px;
+    }
+  }
+
+  .mentorDescription {
+    font-size: 14px;
+  }
+}
