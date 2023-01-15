@@ -11,13 +11,26 @@ import { Button } from 'components/generic/Button';
 import { Heading } from 'components/generic/Heading';
 import { Input } from 'components/generic/Input';
 import { Paragraph } from 'components/generic/Paragraph';
+import { MentorCard } from 'components/MentorCard';
+import { StepCard } from 'components/StepCard';
 
 import style from './App.module.scss';
 
-import { MentorCard } from 'components/MentorCard';
-import { StepCard } from 'components/StepCard';
+import { Stepper } from 'components/Stepper';
+import { Step } from 'components/Stepper/types';
 import { TechnologyCard } from 'components/TechnologyCard';
 import { ReturnComponent } from 'types';
+
+const stepsTitles = ['Overview of Development', 'Introduction to Front-End'];
+const stepsDescr = [
+  'Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.',
+];
+
+const stepCount = 6;
+const steps: Step[] = [...Array(stepCount)].map((_, index) => ({
+  title: stepsTitles[index % stepsTitles.length],
+  description: stepsDescr[index % stepsDescr.length],
+}));
 
 const App = (): ReturnComponent => {
   return (
@@ -86,6 +99,9 @@ const App = (): ReturnComponent => {
           description="Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis."
           sideFrame="left"
         />
+      </div>
+      <div style={{ marginTop: 50, paddingBottom: 50 }}>
+        <Stepper steps={steps} />
       </div>
     </div>
   );

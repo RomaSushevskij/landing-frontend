@@ -1,0 +1,24 @@
+@import "src/styles/variables";
+.connectorWrapper {
+  width: 24px;
+
+  .stepPoint {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: $primary80;
+  }
+  .evenConnector {
+    width: 4px;
+    height: 224px;
+    background:$gradientButton;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .oddConnector {
+    @extend .evenConnector;
+    height: 100px;
+  }
+}
+
+
