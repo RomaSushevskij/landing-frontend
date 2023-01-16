@@ -7,27 +7,38 @@ import angular from 'assets/images/technologies/angular.png';
 import js from 'assets/images/technologies/js.png';
 import react from 'assets/images/technologies/react.png';
 import vue from 'assets/images/technologies/vue.png';
+import { Accordion } from 'components/Accordion';
 import { Button } from 'components/generic/Button';
 import { Heading } from 'components/generic/Heading';
 import { Input } from 'components/generic/Input';
+
+import { v1 } from 'uuid';
+
 import { Paragraph } from 'components/generic/Paragraph';
 import { MentorCard } from 'components/MentorCard';
-import { StepCard } from 'components/StepCard';
+import { Stepper } from 'components/Stepper';
+import { StepCard } from 'components/Stepper/StepCard';
 
 import style from './App.module.scss';
 
-import { Stepper } from 'components/Stepper';
 import { Step } from 'components/Stepper/types';
 import { TechnologyCard } from 'components/TechnologyCard';
 import { ReturnComponent } from 'types';
 
 const stepsTitles = ['Overview of Development', 'Introduction to Front-End'];
 const stepsDescr = [
-  'Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.',
+  'Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.',
+  'Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur.',
+  'Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur.',
+  'Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.',
+  'Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur.',
+  'Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur.',
+  'Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.',
 ];
 
 const stepCount = 6;
 const steps: Step[] = [...Array(stepCount)].map((_, index) => ({
+  id: v1(),
   title: stepsTitles[index % stepsTitles.length],
   description: stepsDescr[index % stepsDescr.length],
 }));
@@ -96,12 +107,24 @@ const App = (): ReturnComponent => {
         <StepCard
           stepNumber={2}
           title="Overview of Development"
-          description="Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis."
+          description="Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis."
           sideFrame="left"
+        />
+        <StepCard
+          stepNumber={2}
+          title="Overview of Development"
+          description="Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis."
+          sideFrame="right"
         />
       </div>
       <div style={{ marginTop: 50, paddingBottom: 50 }}>
         <Stepper steps={steps} />
+      </div>
+      <div style={{ marginTop: 50, paddingBottom: 50 }}>
+        <Accordion
+          summary="What is the price?"
+          details="Front-end engineers work closely with designers to make websites beautiful, functional, and fast. This Career Path will teach you not only the necessary languages and technologies, but how to think like a front-end engineer, too. Front-end engineers work closely with designers to make websites beautiful, functional, and fast. This Career Path will teach you not only the necessary languages and technologies, but how to think like a front-end engineer, too."
+        />
       </div>
     </div>
   );

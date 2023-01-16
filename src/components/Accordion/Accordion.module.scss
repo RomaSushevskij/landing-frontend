@@ -1,0 +1,49 @@
+@import "src/styles/mixins";
+@import "src/styles/variables";
+
+.accordionWrapper {
+  width: 703px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .border {
+    background: $gradientMain;
+    border-radius: 8px;
+    position: relative;
+    clip-path: polygon(32px 0, 100% 0, 100% calc(100% - 32px), calc(100% - 32px) 100%, 0 100%, 0 32px);
+    z-index: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 701px;
+      height: calc(100% - 2px);
+      top: 1px;
+      left: 1px;
+      border-radius: 8px;
+      background-color: $mainBackgroundColor;
+      clip-path: polygon(31px 0, 100% 0, 100% calc(100% - 31px), calc(100% - 31px) 100%, 0 100%, 0 31px);
+      z-index: -1;
+    }
+
+    .content {
+      border-radius: 8px;
+      background-color: $blockBackgroundColor;
+      padding: 27.5px 73px 27.5px 24px;
+
+      .accordionSummary {
+        @include headingH4;
+        margin-bottom: 16px;
+      }
+
+      .accordionDetails {
+
+      }
+
+
+    }
+  }
+
+}
