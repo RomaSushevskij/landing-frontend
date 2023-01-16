@@ -2,7 +2,8 @@
 @import "src/styles/variables";
 
 .cardWrapper {
-  height: 228px;
+  min-height: 228px;
+  height: auto;
   width: 491px;
   display: flex;
   align-items: center;

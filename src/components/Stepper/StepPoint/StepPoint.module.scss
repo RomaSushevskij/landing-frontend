@@ -1,23 +1,54 @@
 @import "src/styles/variables";
-.connectorWrapper {
-  width: 24px;
 
-  .stepPoint {
+.stepWrapper {
+  display: flex;
+
+  .stepCard {
+    margin-top: -114px;
+  }
+
+  .arrow {
+    width: 76px;
+    margin-top: 9px;
+    margin-left: 24px;
+    margin-right: 4px;
+
+    &.even {
+      margin-left: 4px;
+      margin-right: 24px;
+    }
+  }
+
+  .connector {
     width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background-color: $primary80;
+
+    .stepPoint {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: $primary80;
+    }
+
+    .evenConnector {
+      width: 4px;
+      height: 224px;
+      background: $gradientButton;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .oddConnector {
+      @extend .evenConnector;
+      height: 100px;
+    }
   }
-  .evenConnector {
-    width: 4px;
-    height: 224px;
-    background:$gradientButton;
-    text-align: center;
-    margin: 0 auto;
+
+  .empty {
+    width: 595px;
   }
-  .oddConnector {
-    @extend .evenConnector;
-    height: 100px;
+
+  &.even {
+    flex-direction: row-reverse;
   }
 }
 

@@ -1,5 +1,7 @@
 import { memo } from 'react';
 
+import style from './Stepper.module.scss';
+
 import { StepPoint } from 'components/Stepper/StepPoint/StepPoint';
 import { StepperProps } from 'components/Stepper/types';
 import { ReturnComponent } from 'types';
@@ -15,5 +17,5 @@ export const Stepper = memo(({ steps }: StepperProps): ReturnComponent => {
     );
   });
 
-  return <div>{stepsView}</div>;
+  return <div className={style.stepperWrapper}>{stepsView}</div>;
 });

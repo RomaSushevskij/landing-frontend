@@ -34,7 +34,7 @@ const steps: Step[] = [...Array(stepCount)].map((_, index) => ({
 
 const App = (): ReturnComponent => {
   return (
-    <div style={{ margin: 100 }}>
+    <div style={{ margin: 50 }}>
       <div style={{ width: 497, marginBottom: 50 }}>
         <Button>Send</Button>
       </div>
