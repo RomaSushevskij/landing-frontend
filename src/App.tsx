@@ -3,6 +3,9 @@ import React, { useCallback, useState } from 'react';
 import KristinWatson from 'assets/images/mentors/KristinWatson.png';
 import RobertFox from 'assets/images/mentors/RobertFox.png';
 import WadeWarren from 'assets/images/mentors/WadeWarren.png';
+import person1 from 'assets/images/reviews/person1.jpg';
+import person2 from 'assets/images/reviews/person2.jpg';
+import person3 from 'assets/images/reviews/person3.jpg';
 import angular from 'assets/images/technologies/angular.png';
 import js from 'assets/images/technologies/js.png';
 import react from 'assets/images/technologies/react.png';
@@ -12,19 +15,21 @@ import { AccordionProps } from 'components/Accordion/types';
 import { Button } from 'components/generic/Button';
 import { Heading } from 'components/generic/Heading';
 import { Input } from 'components/generic/Input';
+import { Paragraph } from 'components/generic/Paragraph';
+import { MentorCard } from 'components/MentorCard';
 
 import { v1 } from 'uuid';
 
-import { Paragraph } from 'components/generic/Paragraph';
-import { MentorCard } from 'components/MentorCard';
 import { Slider } from 'components/Slider';
+import { SliderImageType } from 'components/Slider/types';
 import { Stepper } from 'components/Stepper';
 import { StepCard } from 'components/Stepper/StepCard';
+import { Step } from 'components/Stepper/types';
 
 import style from './App.module.scss';
 
-import { Step } from 'components/Stepper/types';
 import { TechnologyCard } from 'components/TechnologyCard';
+import { NavBar } from 'screens/NavBar';
 import { ReturnComponent } from 'types';
 
 const stepsTitles = ['Overview of Development', 'Introduction to Front-End'];
@@ -64,6 +69,12 @@ const accordions: (AccordionProps & { id: string })[] = [...Array(accordionsCoun
   }),
 );
 
+const sliderImagesData: SliderImageType[] = [
+  { index: '1', image: person1 },
+  { index: '2', image: person2 },
+  { index: '3', image: person3 },
+];
+
 const App = (): ReturnComponent => {
   const [activeAccordionId, setActiveAccordionId] = useState(accordions[0].id);
 
@@ -80,8 +91,9 @@ const App = (): ReturnComponent => {
   );
 
   return (
-    <div style={{ margin: 50 }}>
-      <div style={{ width: 497, marginBottom: 50 }}>
+    <div className={style.container}>
+      <NavBar />
+      <div style={{ width: 497, marginBottom: 50, marginTop: 50 }}>
         <Button>Send</Button>
       </div>
       <div style={{ width: 497, marginBottom: 50 }}>
@@ -169,9 +181,13 @@ const App = (): ReturnComponent => {
         })}
       </div>
       <div style={{ marginTop: 50, paddingBottom: 50 }}>
-        <Slider />
+        <Slider
+          images={sliderImagesData}
+          firstImageStyle={style.firstImage}
+          secondImageStyle={style.secondImage}
+          thirdImageStyle={style.thirdImage}
+        />
       </div>
-      <div className={style.figure} />
     </div>
   );
 };

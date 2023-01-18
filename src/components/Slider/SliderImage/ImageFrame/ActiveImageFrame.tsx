@@ -1,9 +1,10 @@
-import style from './SliderImage.module.scss';
-
-import person1 from 'assets/images/reviews/person1.png';
+import { ImageFrameProps } from 'components/Slider/SliderImage/ImageFrame/types';
 import { ReturnComponent } from 'types';
 
-export const ActiveImageBorder = (): ReturnComponent => {
+export const ActiveImageFrame = ({
+  image,
+  imageStyle,
+}: ImageFrameProps): ReturnComponent => {
   return (
     <svg
       width="394"
@@ -13,15 +14,15 @@ export const ActiveImageBorder = (): ReturnComponent => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>
-        <pattern id="img1" patternUnits="userSpaceOnUse" width="394" height="424">
+        <pattern id={image} patternUnits="userSpaceOnUse" width="394" height="424">
           <image
-            href={person1}
+            href={image}
             x="0"
             y="0"
             width="394"
             height="424"
-            style={{ backgroundImage: `url(${person1})` }}
-            className={style.image}
+            className={imageStyle}
+            type="active"
           />
         </pattern>
         <filter id="filter0_b_1418_160" x="-10" width="414" height="444">
@@ -42,7 +43,7 @@ export const ActiveImageBorder = (): ReturnComponent => {
       <g filter="url(#filter0_b_1418_160)">
         <path
           d="M388.672 360.975C391.453 358.009 393 354.097 393 350.031L393 17C393 8.16345 385.837 1 377 1L17 1C8.16345 1 1 8.16345 1 17L1 407C1 415.837 8.16345 423 17 423L323.586 423C328.009 423 332.234 421.17 335.258 417.944L388.672 360.975Z"
-          fill="url(#img1)"
+          fill={`url(#${image})`}
           fillOpacity="1"
         />
         <path

@@ -1,0 +1,13 @@
+.navbarWrapper {
+  padding: 40px 0;
+  margin: 0 auto;
+  display: flex;
+  width: 1098px;
+  justify-content: space-between;
+
+  .navigateBlock {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+  }
+}

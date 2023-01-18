@@ -1,0 +1,26 @@
+.sliderWrapper {
+  width: 814px;
+
+  .controlBlock {
+    display: flex;
+    margin-bottom: 16px;
+
+    .btnBlock {
+      display: flex;
+      gap: 24px;
+      margin-left: auto;
+
+    }
+
+    .whatNumber {
+      display: flex;
+      gap: 7px;
+    }
+  }
+
+  .imagesBlock {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}

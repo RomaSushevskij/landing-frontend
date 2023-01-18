@@ -26,14 +26,16 @@
 
     .aggregate {
       position: absolute;
-      height: calc(50% - 12px);
-      width: 3px;
+      height: calc(50% - 11px);
+      width: 4px;
       bottom: 100%;
-      left:11px;
+      left: 11px;
       background: $revertGradientButton;
 
       &.first {
         background: $mainBackgroundColor;
+        width: 100%;
+        left: 0;
       }
     }
 
