@@ -1,8 +1,14 @@
-.container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+.appWrapper {
+  position: relative;
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 }
+
+
 
 .someTitle {
   font-weight: 500;

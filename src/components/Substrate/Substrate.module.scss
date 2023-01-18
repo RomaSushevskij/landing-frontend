@@ -1,0 +1,18 @@
+.substrate {
+  position: absolute;
+  width: 100%;
+  height: 815px;
+  background-image: url("../../assets/images/effects/backgrount-transparent.png");
+  background-position: center;
+  background-size: auto 100%;
+  z-index: -2;
+
+  .shadow {
+    position: absolute;
+    width: 100%;
+    height: 382px;
+    bottom:0;
+    background-image: url("../../assets/images/effects/rectangle.png");
+    z-index: -1;
+  }
+}
