@@ -16,7 +16,7 @@ export const TechnologyCard = memo(
           <div className={style.technologyLogo}>
             <img src={logo} alt="angular" />
           </div>
-          <Heading headingLevel="h4" customStyle={style.technologyTitle}>
+          <Heading level="h4" customStyle={style.technologyTitle}>
             {title}
           </Heading>
         </div>

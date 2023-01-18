@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 
 import KristinWatson from 'assets/images/mentors/KristinWatson.png';
 import RobertFox from 'assets/images/mentors/RobertFox.png';
@@ -8,6 +8,7 @@ import js from 'assets/images/technologies/js.png';
 import react from 'assets/images/technologies/react.png';
 import vue from 'assets/images/technologies/vue.png';
 import { Accordion } from 'components/Accordion';
+import { AccordionProps } from 'components/Accordion/types';
 import { Button } from 'components/generic/Button';
 import { Heading } from 'components/generic/Heading';
 import { Input } from 'components/generic/Input';
@@ -16,6 +17,7 @@ import { v1 } from 'uuid';
 
 import { Paragraph } from 'components/generic/Paragraph';
 import { MentorCard } from 'components/MentorCard';
+import { Slider } from 'components/Slider';
 import { Stepper } from 'components/Stepper';
 import { StepCard } from 'components/Stepper/StepCard';
 
@@ -28,7 +30,7 @@ import { ReturnComponent } from 'types';
 const stepsTitles = ['Overview of Development', 'Introduction to Front-End'];
 const stepsDescr = [
   'Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.',
-  'Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur.',
+  'Lorem ipsum dolor sit amet consectetur.',
   'Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur.',
   'Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.',
   'Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis. Lorem ipsum dolor sit amet consectetur.',
@@ -43,7 +45,40 @@ const steps: Step[] = [...Array(stepCount)].map((_, index) => ({
   description: stepsDescr[index % stepsDescr.length],
 }));
 
+const accordionsSummary = ['What is the price?'];
+const accordionsDetails = [
+  'Front-end engineers work closely with designers to make websites beautiful, functional, and fast. This Career Path will teach you not only the necessary languages and technologies, but how to think like a front-end engineer, too. Front-end engineers work closely with designers to make websites beautiful, functional, and fast. This Career Path will teach you not only the necessary languages and technologies, but how to think like a front-end engineer, too.',
+  'Front-end engineers work closely with designers to make websites beautiful, functional, and fast. This Career Path will teach you not only the necessary languages and technologies, but how to think like a front-end engineer, too.',
+  'Front-end engineers work closely with designers to make websites beautiful, functional, and fast. This Career Path will teach you not only the necessary languages and technologies, but how to think like a front-end engineer, too. Front-end engineers work closely with designers to make websites beautiful, functional, and fast. This Career Path will teach you not only the necessary languages and technologies, but how to think like a front-end engineer, too.',
+  'Front-end engineers work closely with designers to make websites beautiful, functional, and fast. This Career Path will teach you not only the necessary languages and technologies, but how to think like a front-end engineer, too.',
+  'Front-end engineers work closely with designers to make websites beautiful, functional, and fast. This Career Path will teach you not only the necessary languages and technologies, but how to think like a front-end engineer, too.',
+];
+
+const accordionsCount = 5;
+
+const accordions: (AccordionProps & { id: string })[] = [...Array(accordionsCount)].map(
+  (_, index) => ({
+    id: v1(),
+    summary: accordionsSummary[index % accordionsSummary.length],
+    details: accordionsDetails[index % accordionsDetails.length],
+  }),
+);
+
 const App = (): ReturnComponent => {
+  const [activeAccordionId, setActiveAccordionId] = useState(accordions[0].id);
+
+  const onActiveAccordionIdChange = useCallback(
+    (id: string): void => {
+      if (activeAccordionId === id) {
+        setActiveAccordionId('');
+
+        return;
+      }
+      setActiveAccordionId(id);
+    },
+    [activeAccordionId, setActiveAccordionId],
+  );
+
   return (
     <div style={{ margin: 50 }}>
       <div style={{ width: 497, marginBottom: 50 }}>
@@ -53,12 +88,10 @@ const App = (): ReturnComponent => {
         <Input defaultValue="Name" />
       </div>
       <div>
-        <Heading headingLevel="h4" customStyle={style.someTitle}>
-          Best courses ever
-        </Heading>
+        <Heading level="h4">Best courses ever</Heading>
       </div>
       <div style={{ marginTop: 17, width: 382 }}>
-        <Paragraph>
+        <Paragraph level="p1">
           Good course, up to this point, still ongoing. The only downside, why I gave 4,5
           stars, because the teacher sometimes feel like, he is lost, and takes up quite a
           time, to correct himself, and check back etc.
@@ -121,11 +154,24 @@ const App = (): ReturnComponent => {
         <Stepper steps={steps} />
       </div>
       <div style={{ marginTop: 50, paddingBottom: 50 }}>
-        <Accordion
-          summary="What is the price?"
-          details="Front-end engineers work closely with designers to make websites beautiful, functional, and fast. This Career Path will teach you not only the necessary languages and technologies, but how to think like a front-end engineer, too. Front-end engineers work closely with designers to make websites beautiful, functional, and fast. This Career Path will teach you not only the necessary languages and technologies, but how to think like a front-end engineer, too."
-        />
+        {accordions.map(({ id, summary, details }) => {
+          return (
+            <div key={id} style={{ marginBottom: 20 }}>
+              <Accordion
+                id={id}
+                summary={summary}
+                details={details}
+                expanded={activeAccordionId === id}
+                onChange={onActiveAccordionIdChange}
+              />
+            </div>
+          );
+        })}
       </div>
+      <div style={{ marginTop: 50, paddingBottom: 50 }}>
+        <Slider />
+      </div>
+      <div className={style.figure} />
     </div>
   );
 };

@@ -15,11 +15,13 @@ export const MentorCard = memo(
       <div className={style.mentorCardWrapper}>
         <Image image={image} customImageStyle={customImageStyle} />
         <div className={style.name}>
-          <Heading headingLevel="h4" customStyle={style.mentorName}>
+          <Heading level="h4" customStyle={style.mentorName}>
             {name}
           </Heading>
         </div>
-        <Paragraph customStyle={style.mentorDescription}>{description}</Paragraph>
+        <Paragraph level="p1" customStyle={style.mentorDescription}>
+          {description}
+        </Paragraph>
       </div>
     );
   },

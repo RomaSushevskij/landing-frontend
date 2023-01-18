@@ -18,13 +18,15 @@ export const StepCard = memo(
       <div className={finalClassName}>
         <div className={style.border}>
           <div className={style.content}>
-            <Heading headingLevel="h4" customStyle={style.stepNumber}>
+            <Heading level="h4" customStyle={style.stepNumber}>
               Step {stepNumber}
             </Heading>
-            <Heading headingLevel="h3" customStyle={style.stepTitle}>
+            <Heading level="h3" customStyle={style.stepTitle}>
               {title}
             </Heading>
-            <Paragraph customStyle={style.stepDescription}>{description}</Paragraph>
+            <Paragraph level="p1" customStyle={style.stepDescription}>
+              {description}
+            </Paragraph>
           </div>
         </div>
       </div>

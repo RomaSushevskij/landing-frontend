@@ -1,9 +1,14 @@
 @import "src/styles/variables";
 
-.paragraph {
+.paragraphP1 {
   font-family: $secondaryFontFamily;
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
   color: $mainTextColor;
+}
+
+.paragraphP2 {
+  @extend .paragraphP1;
+  font-size: 14px;
 }

@@ -9,10 +9,11 @@
   align-items: center;
 
   .border {
+    width: 100%;
     background: $gradientMain;
     border-radius: 8px;
     position: relative;
-    clip-path: polygon(32px 0, 100% 0, 100% calc(100% - 32px), calc(100% - 32px) 100%, 0 100%, 0 32px);
+    clip-path: polygon(30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 30px);
     z-index: 0;
 
     &::before {
@@ -24,24 +25,55 @@
       left: 1px;
       border-radius: 8px;
       background-color: $mainBackgroundColor;
-      clip-path: polygon(31px 0, 100% 0, 100% calc(100% - 31px), calc(100% - 31px) 100%, 0 100%, 0 31px);
+      clip-path: polygon(29px 0, 100% 0, 100% calc(100% - 29px), calc(100% - 29px) 100%, 0 100%, 0 29px);
       z-index: -1;
     }
 
     .content {
       border-radius: 8px;
       background-color: $blockBackgroundColor;
-      padding: 27.5px 73px 27.5px 24px;
+      padding: 16.5px 73px 16.5px 24px;
+      position: relative;
+      transition: all 0.4s cubic-bezier(0, 1, 0, 1);
 
-      .accordionSummary {
-        @include headingH4;
-        margin-bottom: 16px;
+      &.expanded {
+        padding: 27.5px 73px 27.5px 24px;
+        transition: padding .15s ease;
       }
 
       .accordionDetails {
+        max-height: 0;
+        overflow-y: hidden;
+        transition: all 0.3s cubic-bezier(0, 1, 0, 1);
 
+        &.expanded {
+          max-height: 1000px;
+          margin-top: 16px;
+          transition: max-height .8s ease;
+        }
       }
 
+      .expandIcon {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        right: 21px;
+        top: 22px;
+        margin: -22px -21px -24px -690px;
+        padding: 22px 21px 26px 668px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.expanded {
+          top: 29px;
+        }
+
+        &:hover {
+          cursor: pointer;
+
+        }
+      }
 
     }
   }

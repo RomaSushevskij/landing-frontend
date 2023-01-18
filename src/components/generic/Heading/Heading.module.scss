@@ -1,10 +1,32 @@
 @import "src/styles/variables";
+@import "src/styles/mixins";
 
 .heading {
   font-family: $mainFontFamily;
   font-weight: 600;
-  font-size: 72px;
   line-height: 120%;
   color: $mainTextColor;
-
 }
+
+h1.heading {
+  @extend .heading;
+  font-size: 150px;
+}
+
+h2.heading {
+  @extend .heading;
+  font-size: 72px;
+}
+
+h3.heading {
+  @extend .heading;
+  font-size: 32px;
+}
+
+h4.heading {
+  @extend .heading;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+

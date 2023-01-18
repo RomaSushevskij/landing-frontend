@@ -7,4 +7,5 @@ type DefaultParagraphProps = DetailedHTMLProps<
 
 export type ParagraphProps = DefaultParagraphProps & {
   customStyle?: string;
+  level: 'p1' | 'p2';
 };
