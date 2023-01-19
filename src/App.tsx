@@ -20,19 +20,20 @@ import { MentorCard } from 'components/MentorCard';
 import { NavBar } from 'components/NavBar';
 import { Slider } from 'components/Slider';
 import { SliderImageType } from 'components/Slider/types';
+import { Stepper } from 'components/Stepper';
 
 import { v1 } from 'uuid';
 
-import { Stepper } from 'components/Stepper';
 import { StepCard } from 'components/Stepper/StepCard';
 import { Step } from 'components/Stepper/types';
 import { Substrate } from 'components/Substrate';
 import { TechnologyCard } from 'components/TechnologyCard';
+import { AboutUs } from 'screens/AboutUs';
 
 import style from './App.module.scss';
 
-import { AboutUs } from 'screens/AboutUs';
 import { Main } from 'screens/Main';
+import { Technologies } from 'screens/Techhologies';
 import { ReturnComponent } from 'types';
 
 const stepsTitles = ['Overview of Development', 'Introduction to Front-End'];
@@ -100,6 +101,7 @@ const App = (): ReturnComponent => {
         <NavBar />
         <Main />
         <AboutUs />
+        <Technologies />
         <div style={{ width: 497, marginBottom: 50, marginTop: 50 }}>
           <Button>Send</Button>
         </div>
