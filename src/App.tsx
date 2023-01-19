@@ -21,18 +21,19 @@ import { NavBar } from 'components/NavBar';
 import { Slider } from 'components/Slider';
 import { SliderImageType } from 'components/Slider/types';
 import { Stepper } from 'components/Stepper';
+import { StepCard } from 'components/Stepper/StepCard';
 
 import { v1 } from 'uuid';
 
-import { StepCard } from 'components/Stepper/StepCard';
 import { Step } from 'components/Stepper/types';
 import { Substrate } from 'components/Substrate';
 import { TechnologyCard } from 'components/TechnologyCard';
 import { AboutUs } from 'screens/AboutUs';
+import { Main } from 'screens/Main';
 
 import style from './App.module.scss';
 
-import { Main } from 'screens/Main';
+import { Steps } from 'screens/Steps';
 import { Technologies } from 'screens/Techhologies';
 import { ReturnComponent } from 'types';
 
@@ -48,7 +49,8 @@ const stepsDescr = [
 ];
 
 const stepCount = 6;
-const steps: Step[] = [...Array(stepCount)].map((_, index) => ({
+
+export const steps: Step[] = [...Array(stepCount)].map((_, index) => ({
   id: v1(),
   title: stepsTitles[index % stepsTitles.length],
   description: stepsDescr[index % stepsDescr.length],
@@ -102,6 +104,7 @@ const App = (): ReturnComponent => {
         <Main />
         <AboutUs />
         <Technologies />
+        <Steps />
         <div style={{ width: 497, marginBottom: 50, marginTop: 50 }}>
           <Button>Send</Button>
         </div>
