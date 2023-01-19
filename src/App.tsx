@@ -24,12 +24,13 @@ import { Stepper } from 'components/Stepper';
 import { StepCard } from 'components/Stepper/StepCard';
 import { Step } from 'components/Stepper/types';
 import { Substrate } from 'components/Substrate';
+import { TechnologyCard } from 'components/TechnologyCard';
 
 import { v1 } from 'uuid';
 
-import { TechnologyCard } from 'components/TechnologyCard';
 import { AboutUs } from 'screens/AboutUs';
 import { Asks } from 'screens/Asks';
+import { Gallery } from 'screens/Gallery';
 import { Main } from 'screens/Main';
 import { Review } from 'screens/Review';
 
@@ -109,6 +110,7 @@ const App = (): ReturnComponent => {
         <Steps />
         <Asks />
         <Review />
+        <Gallery />
         <div style={{ width: 497, marginBottom: 50, marginTop: 50 }}>
           <Button>Send</Button>
         </div>
