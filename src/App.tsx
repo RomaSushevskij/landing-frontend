@@ -19,18 +19,19 @@ import { Paragraph } from 'components/generic/Paragraph';
 import { MentorCard } from 'components/MentorCard';
 import { NavBar } from 'components/NavBar';
 import { Slider } from 'components/Slider';
+import { SliderImageType } from 'components/Slider/types';
 
 import { v1 } from 'uuid';
 
-import { SliderImageType } from 'components/Slider/types';
 import { Stepper } from 'components/Stepper';
 import { StepCard } from 'components/Stepper/StepCard';
 import { Step } from 'components/Stepper/types';
 import { Substrate } from 'components/Substrate';
+import { TechnologyCard } from 'components/TechnologyCard';
 
 import style from './App.module.scss';
 
-import { TechnologyCard } from 'components/TechnologyCard';
+import { AboutUs } from 'screens/AboutUs';
 import { Main } from 'screens/Main';
 import { ReturnComponent } from 'types';
 
@@ -94,10 +95,11 @@ const App = (): ReturnComponent => {
 
   return (
     <div className={style.appWrapper}>
-      <Substrate />
       <div className={style.container}>
+        <Substrate />
         <NavBar />
         <Main />
+        <AboutUs />
         <div style={{ width: 497, marginBottom: 50, marginTop: 50 }}>
           <Button>Send</Button>
         </div>
