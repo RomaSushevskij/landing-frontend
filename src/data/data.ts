@@ -1,3 +1,7 @@
+import person1 from 'assets/images/reviews/person1.jpg';
+import person2 from 'assets/images/reviews/person2.jpg';
+import person3 from 'assets/images/reviews/person3.jpg';
+
 import { v1 } from 'uuid';
 
 import angular from 'assets/images/technologies/angular.png';
@@ -5,6 +9,7 @@ import js from 'assets/images/technologies/js.png';
 import react from 'assets/images/technologies/react.png';
 import vue from 'assets/images/technologies/vue.png';
 import { AccordionProps } from 'components/Accordion/types';
+import { SliderImageType } from 'components/Slider/types';
 import { Step } from 'components/Stepper/types';
 import { TechnologyCardProps } from 'components/TechnologyCard/types';
 
@@ -35,3 +40,9 @@ export const accordionsData: (AccordionProps & { id: string })[] = [
   details:
     'Front-end engineers work closely with designers to make websites beautiful, functional, and fast. This Career Path will teach you not only the necessary languages and technologies, but how to think like a front-end engineer, too.',
 }));
+
+export const sliderImagesData: SliderImageType[] = [
+  { index: '1', image: person1 },
+  { index: '2', image: person2 },
+  { index: '3', image: person3 },
+];

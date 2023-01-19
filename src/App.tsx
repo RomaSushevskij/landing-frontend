@@ -23,14 +23,15 @@ import { SliderImageType } from 'components/Slider/types';
 import { Stepper } from 'components/Stepper';
 import { StepCard } from 'components/Stepper/StepCard';
 import { Step } from 'components/Stepper/types';
+import { Substrate } from 'components/Substrate';
 
 import { v1 } from 'uuid';
 
-import { Substrate } from 'components/Substrate';
 import { TechnologyCard } from 'components/TechnologyCard';
 import { AboutUs } from 'screens/AboutUs';
 import { Asks } from 'screens/Asks';
 import { Main } from 'screens/Main';
+import { Review } from 'screens/Review';
 
 import style from './App.module.scss';
 
@@ -107,6 +108,7 @@ const App = (): ReturnComponent => {
         <Technologies />
         <Steps />
         <Asks />
+        <Review />
         <div style={{ width: 497, marginBottom: 50, marginTop: 50 }}>
           <Button>Send</Button>
         </div>

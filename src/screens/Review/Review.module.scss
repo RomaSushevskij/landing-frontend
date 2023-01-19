@@ -1,0 +1,43 @@
+.reviewWrapper {
+  margin: 180px auto 0 auto;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 54px;
+  }
+
+  .reviewContent {
+    display: flex;
+
+    .descriptions {
+      max-width: 392px;
+      margin-right: 23px;
+      margin-top: 118px;
+    }
+
+    .firstImage {
+      transform: scale(3.5, 3.5) translate(-32%, -36%);
+
+      &[type='active'] {
+        transform: scale(1.65, 1.65) translate(-19%, -19%);
+      }
+    }
+
+    .secondImage {
+      transform: scale(1.6, 1.6) translate(-22%, -20%);
+
+      &[type='active'] {
+        transform: scale(1.5, 1.5) translate(-17%, -13%);
+      }
+    }
+
+    .thirdImage {
+      transform: scale(1.55, 1.55) translate(-32%, -18%);
+
+      &[type='active'] {
+        transform: scale(1.46, 1.46) translate(-16.5%, -13.5%);
+      }
+    }
+  }
+}
+
