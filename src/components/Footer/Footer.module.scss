@@ -1,0 +1,56 @@
+@import "src/styles/variables";
+
+.footer {
+  margin-top: 148px;
+  padding: 33px 0;
+  border-top: 1px solid rgba(21, 191, 253, 0.35);
+  background: $blockBackgroundColor;
+
+
+  .container {
+    display: flex;
+    justify-content: center;
+    .address {
+      p:nth-child(2) {
+        margin-top: 24px;
+      }
+
+      margin-right: 193px;
+    }
+
+    .company {
+      margin-right: 165px;
+
+      .links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: max-content max-content max-content;
+        margin-top: 24px;
+        column-gap: 145px;
+
+        p {
+          margin-bottom: 16px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .socialMedia {
+      .icons {
+        display: flex;
+        gap: 26px;
+        margin-top: 25px;
+      }
+    }
+
+    h4 {
+      font-family: Roboto;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 21px;
+    }
+  }
+}
