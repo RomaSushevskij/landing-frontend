@@ -1,0 +1,52 @@
+@import "src/styles/variables";
+
+.contactsBorder {
+  margin: 181px auto 0 auto;
+  background: $gradientMain;
+  padding: 56px 364px;
+  border-radius: 20px;
+  position: relative;
+  text-align: center;
+
+  p {
+    margin: 16px 0 24px 0;
+  }
+
+  &::before {
+    content: '';
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    background: $mainBackgroundColor;
+    border-radius: 20px;
+    z-index: -1;
+  }
+
+  &::after {
+    content: '';
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    background: $blockBackgroundColor;
+    border-radius: 20px;
+    z-index: -1;
+  }
+
+  z-index: 0;
+
+  form {
+    width: 497px;
+
+    .input {
+      margin-bottom: 16px;
+
+      &:nth-child(3) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
