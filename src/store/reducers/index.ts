@@ -1,1 +1,1 @@
-export { contactFormReducer } from './contactFormReducer';
+export { contactFormReducer, submitContactForm } from './contactFormReducer';
