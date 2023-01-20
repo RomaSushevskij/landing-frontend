@@ -1,0 +1,1 @@
+export { contactFormReducer } from './contactFormReducer';

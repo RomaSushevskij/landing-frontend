@@ -1,7 +1,7 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk';
 
-import { contactFormReducer } from 'store/reducers/contactFormReducer';
+import { contactFormReducer } from 'store/reducers';
 
 export const rootReducer = combineReducers({
   contactForm: contactFormReducer,
