@@ -1,14 +1,16 @@
 import { memo } from 'react';
 
+import { Button } from 'components/generic/Button';
+
 import { yupResolver } from '@hookform/resolvers/yup';
 
-import { Button } from 'components/generic/Button';
+import { Heading } from 'components/generic/Heading';
 
 import { useForm } from 'react-hook-form';
 
-import { Heading } from 'components/generic/Heading';
 import { Input } from 'components/generic/Input';
 import { Paragraph } from 'components/generic/Paragraph';
+import { useAppDispatch } from 'hooks/useAppDispatch/useAppDispatch';
 import { ContactFormValues } from 'screens/ContactUs/types';
 import { submitContactForm } from 'store/reducers';
 
@@ -18,6 +20,7 @@ import { ReturnComponent } from 'types';
 import { ContactFormSchema } from 'utils/validationSchemes';
 
 export const ContactUs = memo((): ReturnComponent => {
+  const dispatch = useAppDispatch();
 
   const {
     register,
@@ -32,9 +35,8 @@ export const ContactUs = memo((): ReturnComponent => {
     },
     resolver: yupResolver(ContactFormSchema),
   });
-  const onFormSubmit = async (data: ContactFormValues): Promise<void> => {
-    console.log('form');
-    await submitContactForm(data);
+  const onFormSubmit = (data: ContactFormValues): void => {
+    dispatch(submitContactForm(data));
   };
 
   return (
