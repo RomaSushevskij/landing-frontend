@@ -78,6 +78,12 @@
     }
   }
 
+  .errorInput {
+    &::placeholder {
+      color: $mainTextColor;
+    }
+  }
+
   .error {
     font-size: 16px;
     line-height: 140%;

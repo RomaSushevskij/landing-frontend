@@ -3,9 +3,9 @@ import { ContactFormValues } from 'screens/ContactUs/types';
 
 export const formsAPI = {
   async submitContactForm(values: ContactFormValues) {
-    console.log('ddd');
-    const response = await axiosInstance.post(endPoints.feedback, values);
-
-    console.log(response);
+    await axiosInstance.post<ContactFormValues & { id: number }>(
+      endPoints.feedback,
+      values,
+    );
   },
 };
