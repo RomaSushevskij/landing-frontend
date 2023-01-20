@@ -1,25 +1,29 @@
-import React, { ChangeEvent, KeyboardEvent, memo } from 'react';
+import React, { ChangeEvent, ForwardedRef, forwardRef, KeyboardEvent } from 'react';
 
 import style from './Input.module.scss';
 import { InputTextProps } from './types';
 
 import { ReturnComponent } from 'types';
 
-export const Input = memo(
-  ({
-    type,
-    onChange,
-    onChangeText,
-    onKeyPress,
-    onEnter,
-    error,
-    className,
-    spanClassName,
-    name,
-    customStyle,
-    disabled,
-    ...restProps
-  }: InputTextProps): ReturnComponent => {
+export const Input = forwardRef(
+  (
+    props: InputTextProps,
+    innerRef: ForwardedRef<HTMLInputElement | null>,
+  ): ReturnComponent => {
+    const {
+      type,
+      onChange,
+      onChangeText,
+      onKeyPress,
+      onEnter,
+      error,
+      className,
+      spanClassName,
+      name,
+      customStyle,
+      disabled,
+      ...restProps
+    } = props;
     const finalInputWrapperClassName = customStyle
       ? `${customStyle} ${style.inputWrapper}`
       : style.inputWrapper;
@@ -60,10 +64,11 @@ export const Input = memo(
             onKeyPress={onKeyPressCallback}
             className={finalInputClassName}
             disabled={disabled}
+            ref={innerRef}
             {...restProps}
           />
         </div>
-        {error && <div className={finalSpanClassName}>{error}</div>}
+        {error && <p className={finalSpanClassName}>{error}</p>}
       </div>
     );
   },
