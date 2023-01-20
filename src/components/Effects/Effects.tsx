@@ -33,6 +33,7 @@ export const Effects = (): ReturnComponent => {
       <Star width={12.3} height={14} left={30} top={6574} />
       <Star width={12.3} height={14} left={57} top={6474} />
       <Star width={29} height={32.7} left={66} top={6323} />
+      <Star width={35.6} height={40.6} left={85.5} top={744} isShadow />
     </>
   );
 };

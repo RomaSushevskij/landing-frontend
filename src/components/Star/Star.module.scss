@@ -7,3 +7,10 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.starShadow {
+  @extend .star;
+  transform: scale(2, 2) rotate(170deg);
+  z-index: 0;
+  background-image: url("../../assets/images/effects/star_shadow.svg");
+}
