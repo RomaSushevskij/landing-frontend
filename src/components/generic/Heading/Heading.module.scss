@@ -6,6 +6,8 @@
   font-weight: 600;
   line-height: 120%;
   color: $mainTextColor;
+  position: relative;
+  z-index: 10;
 }
 
 h1.heading {
@@ -20,7 +22,7 @@ h2.heading {
 
 h3.heading {
   @extend .heading;
-  font-size: 32px;
+  font-size: 32px;;
 }
 
 h4.heading {

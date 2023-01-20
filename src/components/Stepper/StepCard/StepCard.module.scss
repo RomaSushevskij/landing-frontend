@@ -69,12 +69,7 @@
       border-radius: 8px;
       background-color: $blockBackgroundColor;
 
-      .stepNumber {
-        @include headingH4();
-      }
-
       .stepTitle {
-        @include headingH3();
         margin: 16px 0;
       }
 

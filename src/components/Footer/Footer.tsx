@@ -2,14 +2,14 @@ import { memo } from 'react';
 
 import { Heading } from 'components/generic/Heading';
 import { Paragraph } from 'components/generic/Paragraph';
-import { FacebookIcon } from 'components/Icons/FacebookIcon';
-import { GitlabIcon } from 'components/Icons/GitlabIcon';
+import { FacebookIcon } from 'components/icons/FacebookIcon';
+import { GitlabIcon } from 'components/icons/GitlabIcon';
 
 import style from './Footer.module.scss';
 
-import { LinkedInIcon } from 'components/Icons/LinkedInIcon';
-import { Logo } from 'components/Icons/Logo';
-import { TwitterIcon } from 'components/Icons/TwitterIcon';
+import { LinkedInIcon } from 'components/icons/LinkedInIcon';
+import { Logo } from 'components/icons/Logo';
+import { TwitterIcon } from 'components/icons/TwitterIcon';
 import { ReturnComponent } from 'types';
 
 export const Footer = memo((): ReturnComponent => {

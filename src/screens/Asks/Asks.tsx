@@ -7,7 +7,7 @@ import style from './Asks.module.scss';
 
 import { Paragraph } from 'components/generic/Paragraph';
 import { accordionsData } from 'data/data';
-import { AskMark } from 'screens/Asks/AskMark';
+import { AskMark } from 'screens/Asks/AskMark/AskMark';
 import { ReturnComponent } from 'types';
 
 export const Asks = memo((): ReturnComponent => {

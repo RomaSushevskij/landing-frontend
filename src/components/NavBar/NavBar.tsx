@@ -3,7 +3,7 @@ import { memo } from 'react';
 import style from './NavBar.module.scss';
 
 import { Paragraph } from 'components/generic/Paragraph';
-import { Logo } from 'components/Icons/Logo';
+import { Logo } from 'components/icons/Logo';
 
 export const NavBar = memo(() => {
   return (

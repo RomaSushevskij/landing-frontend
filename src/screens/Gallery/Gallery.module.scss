@@ -11,6 +11,8 @@
   grid-template-columns: 288px 600px 288px;
   grid-template-rows: max-content 209px 201px 216px;
   grid-gap: 24px;
+  position: relative;
+  z-index: 1;
 
   h2 {
     grid-column: 1/4;

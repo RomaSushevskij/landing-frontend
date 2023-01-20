@@ -1,5 +1,6 @@
 .appWrapper {
   position: relative;
+  overflow: hidden;
 
   .container {
     width: 100%;
@@ -8,43 +9,3 @@
   }
 }
 
-
-
-.someTitle {
-  font-weight: 500;
-  font-size: 24px;
-}
-
-.wadeWarrenImage {
-  background-position-x: 18% !important;
-  background-size: 145% !important;
-}
-
-.robertFoxImage {
-  background-position-y: 0 !important;
-  background-size: 127% !important;
-}
-
-.firstImage {
-  transform: scale(3.5, 3.5) translate(-32%, -36%);
-
-  &[type='active'] {
-    transform: scale(1.65, 1.65) translate(-19%, -19%);
-  }
-}
-
-.secondImage {
-  transform: scale(1.6, 1.6) translate(-22%, -20%);
-
-  &[type='active'] {
-    transform: scale(1.5, 1.5) translate(-17%, -13%);
-  }
-}
-
-.thirdImage {
-  transform: scale(1.55, 1.55) translate(-32%, -18%);
-
-  &[type='active'] {
-    transform: scale(1.46, 1.46) translate(-16.5%, -13.5%);
-  }
-}

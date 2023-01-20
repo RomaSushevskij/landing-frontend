@@ -1,0 +1,15 @@
+.highlightWrapper {
+  position: absolute;
+  width: 356px;
+  height: 356px;
+  z-index: 0;
+
+  .highlight {
+    width: 900px;
+    height: 1056px;
+    background-image: url("../../assets/images/effects/highlight.png");
+    background-size: auto;
+    transform: translate(-30%, -34%);
+    position: absolute;
+  }
+}

@@ -1,4 +1,4 @@
-import { NextIcon } from 'components/Icons/NextIcon';
+import { NextIcon } from 'components/icons/NextIcon';
 import { ReturnComponent } from 'types';
 
 export const PrevIcon = (): ReturnComponent => {

@@ -6,8 +6,8 @@ import { Heading } from 'components/generic/Heading';
 import style from './Accordion.module.scss';
 
 import { Paragraph } from 'components/generic/Paragraph';
-import { AddIcon } from 'components/Icons/AddIcon';
-import { RemoveIcon } from 'components/Icons/RemoveIcon';
+import { AddIcon } from 'components/icons/AddIcon';
+import { RemoveIcon } from 'components/icons/RemoveIcon';
 import { ReturnComponent } from 'types';
 
 export const Accordion = memo(

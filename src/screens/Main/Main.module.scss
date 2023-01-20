@@ -1,5 +1,7 @@
 .mainWrapper {
   margin: 74px auto 0 auto;
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: max-content 1fr 416px;
   grid-template-rows: 1fr 1fr max-content;
@@ -7,6 +9,7 @@
       "frontEnd . description"
       "btn . developer"
       ". . courses";
+
 
   .frontEnd {
     grid-area: frontEnd;
