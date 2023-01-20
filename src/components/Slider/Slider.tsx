@@ -1,4 +1,4 @@
-import { memo, useState } from 'react';
+import { memo, useCallback, useState } from 'react';
 
 import { Heading } from 'components/generic/Heading';
 
@@ -48,7 +48,7 @@ export const Slider = memo(
       );
     });
 
-    const onNextBtnClick = (): void => {
+    const onNextBtnClick = useCallback((): void => {
       const nextSliderImages: SliderImageType[] = [...sliderImages];
 
       const lastEl = nextSliderImages.splice(0, 1)[0];
@@ -56,16 +56,16 @@ export const Slider = memo(
       nextSliderImages.push(lastEl);
 
       setSliderImages(nextSliderImages);
-    };
+    }, [sliderImages]);
 
-    const onPrevBtnClick = (): void => {
+    const onPrevBtnClick = useCallback((): void => {
       const nextSliderImages: SliderImageType[] = [...sliderImages];
       const lastEl = nextSliderImages.splice(sliderImages.length - 1, 1)[0];
 
       nextSliderImages.unshift(lastEl);
 
       setSliderImages(nextSliderImages);
-    };
+    }, [sliderImages]);
 
     return (
       <div className={style.sliderWrapper}>

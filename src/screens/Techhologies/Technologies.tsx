@@ -15,7 +15,7 @@ export const Technologies = memo((): ReturnComponent => {
   });
 
   return (
-    <div className={style.technologiesWrapper}>
+    <div id="technologies" className={style.technologiesWrapper}>
       <Heading level="h2"> Programming technologies</Heading>
       <Paragraph level="p1">
         By the end, you’ll have the portfolio and interview skills you need to start your
