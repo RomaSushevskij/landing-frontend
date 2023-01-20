@@ -9,4 +9,4 @@ The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
 ### Demo
-:link: [Link to Demo App](https://romasushevskij.github.io/test-feedback-form/)
+:link: [Link to Demo App](https://RomaSushevskij.github.io/landing-frontend/)
