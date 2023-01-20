@@ -1,18 +1,20 @@
 import { memo } from 'react';
 
 import { Button } from 'components/generic/Button';
+import { Heading } from 'components/generic/Heading';
+import { Input } from 'components/generic/Input';
 
 import { yupResolver } from '@hookform/resolvers/yup';
 
-import { Heading } from 'components/generic/Heading';
+import { Paragraph } from 'components/generic/Paragraph';
 
 import { useForm } from 'react-hook-form';
 
-import { Input } from 'components/generic/Input';
-import { Paragraph } from 'components/generic/Paragraph';
 import { useAppDispatch } from 'hooks/useAppDispatch/useAppDispatch';
+import { useAppSelector } from 'hooks/useAppSelector/useAppSelector';
 import { ContactFormValues } from 'screens/ContactUs/types';
 import { submitContactForm } from 'store/reducers';
+import { selectIsFormLoading } from 'store/selectors/contactFormSelectors';
 
 import style from './ContactUs.module.scss';
 
@@ -21,10 +23,12 @@ import { ContactFormSchema } from 'utils/validationSchemes';
 
 export const ContactUs = memo((): ReturnComponent => {
   const dispatch = useAppDispatch();
+  const isFormLoading = useAppSelector(selectIsFormLoading);
 
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     mode: 'onTouched',
@@ -35,8 +39,12 @@ export const ContactUs = memo((): ReturnComponent => {
     },
     resolver: yupResolver(ContactFormSchema),
   });
-  const onFormSubmit = (data: ContactFormValues): void => {
-    dispatch(submitContactForm(data));
+  const onFormSubmit = async (data: ContactFormValues): Promise<void> => {
+    const resultAction = await dispatch(submitContactForm(data));
+
+    if (submitContactForm.fulfilled.match(resultAction)) {
+      reset();
+    }
   };
 
   return (
@@ -63,7 +71,9 @@ export const ContactUs = memo((): ReturnComponent => {
             {...register('eMail')}
           />
         </div>
-        <Button type="submit">Send</Button>
+        <Button type="submit" disabled={isFormLoading === 'loading'}>
+          Send
+        </Button>
       </form>
     </div>
   );

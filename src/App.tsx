@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Effects } from 'components/Effects/Effects';
 import { Footer } from 'components/Footer';
 import { NavBar } from 'components/NavBar';
