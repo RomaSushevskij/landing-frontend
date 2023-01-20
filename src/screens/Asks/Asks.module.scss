@@ -1,5 +1,7 @@
 .asksWrapper {
   margin: 180px auto 0 auto;
+  position: relative;
+  z-index: 1;
 
   h2 {
     max-width: 641px;

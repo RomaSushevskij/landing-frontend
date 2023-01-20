@@ -3,6 +3,7 @@ import React, { memo } from 'react';
 import KristinWatson from 'assets/images/mentors/KristinWatson.png';
 import RobertFox from 'assets/images/mentors/RobertFox.png';
 import WadeWarren from 'assets/images/mentors/WadeWarren.png';
+import { Front } from 'components/Front';
 
 import style from './AboutUs.module.scss';
 
@@ -52,6 +53,9 @@ export const AboutUs = memo(() => {
           functional, and fast. This Career Path will teach you not only the necessary
           languages and technologies, but how to think like a front-end engineer, too.
         </Paragraph>
+      </div>
+      <div className={style.frontEffect}>
+        <Front />
       </div>
     </div>
   );

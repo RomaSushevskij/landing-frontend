@@ -1,0 +1,9 @@
+.star {
+  background-image: url("../../assets/images/effects/star.svg");
+  transform: rotate(170deg);
+  position: absolute;
+  z-index: -1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}

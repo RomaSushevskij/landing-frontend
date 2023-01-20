@@ -43,9 +43,7 @@ export const Accordion = memo(
       <div className={style.accordionWrapper}>
         <div className={style.border}>
           <div className={finalContentStyle}>
-            <Heading level="h4" customStyle={style.accordionSummary}>
-              {summary}
-            </Heading>
+            <Heading level="h4">{summary}</Heading>
             <Paragraph level="p1" customStyle={finalAccordionDetailsClassName}>
               {details}
             </Paragraph>

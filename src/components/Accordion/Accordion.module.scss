@@ -7,8 +7,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  z-index: 1;
 
   .border {
     width: 100%;
@@ -62,9 +60,6 @@
         top: 22px;
         margin: -22px -21px -24px -690px;
         padding: 22px 21px 26px 668px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
 
         &.expanded {
           top: 29px;
