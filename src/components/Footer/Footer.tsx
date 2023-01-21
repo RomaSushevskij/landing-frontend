@@ -34,10 +34,18 @@ export const Footer = memo((): ReturnComponent => {
         <div className={style.socialMedia}>
           <Heading level="h4">Social media</Heading>
           <div className={style.icons}>
-            <FacebookIcon />
-            <GitlabIcon />
-            <TwitterIcon />
-            <LinkedInIcon />
+            <a href="/#">
+              <FacebookIcon />
+            </a>
+            <a href="/#">
+              <GitlabIcon />
+            </a>
+            <a href="/#">
+              <TwitterIcon />
+            </a>
+            <a href="/#">
+              <LinkedInIcon />
+            </a>
           </div>
         </div>
       </div>
