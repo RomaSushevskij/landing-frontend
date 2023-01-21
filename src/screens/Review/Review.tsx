@@ -11,7 +11,7 @@ import { ReturnComponent } from 'types';
 
 export const Review = memo((): ReturnComponent => {
   return (
-    <div className={style.reviewWrapper}>
+    <section className={style.reviewWrapper}>
       <Heading level="h2">Review</Heading>
       <div className={style.reviewContent}>
         <div className={style.descriptions}>
@@ -30,6 +30,6 @@ export const Review = memo((): ReturnComponent => {
           thirdImageStyle={style.thirdImage}
         />
       </div>
-    </div>
+    </section>
   );
 });

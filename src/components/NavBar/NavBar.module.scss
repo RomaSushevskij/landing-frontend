@@ -1,3 +1,5 @@
+@import "src/styles/variables";
+
 .navbarWrapper {
   padding: 40px 0;
   margin: 0 auto;
@@ -9,5 +11,18 @@
     display: flex;
     align-items: center;
     gap: 48px;
+
+    a {
+      position: relative;
+      z-index: 1;
+      color: $mainTextColor;
+      text-decoration: none;
+      transition: color .3s ease-in-out;
+
+      &:hover {
+        color: $secondaryTextColor;
+        transition: color .3s ease-in-out;
+      }
+    }
   }
 }

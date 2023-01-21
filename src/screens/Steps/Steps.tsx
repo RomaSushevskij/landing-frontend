@@ -1,17 +1,19 @@
 import React, { memo } from 'react';
 
+import { Heading } from 'components/generic/Heading';
+
 import style from './Steps.module.scss';
 
-import { Heading } from 'components/generic/Heading';
+import { anchors } from 'components/NavBar/enums';
 import { Stepper } from 'components/Stepper';
 import { stepsData } from 'data/data';
 import { ReturnComponent } from 'types';
 
 export const Steps = memo((): ReturnComponent => {
   return (
-    <div className={style.stepsWrapper}>
+    <section id={anchors.steps} className={style.stepsWrapper}>
       <Heading level="h2">Steps</Heading>
       <Stepper steps={stepsData} />
-    </div>
+    </section>
   );
 });

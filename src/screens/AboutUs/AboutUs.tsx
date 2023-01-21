@@ -4,17 +4,18 @@ import KristinWatson from 'assets/images/mentors/KristinWatson.png';
 import RobertFox from 'assets/images/mentors/RobertFox.png';
 import WadeWarren from 'assets/images/mentors/WadeWarren.png';
 import { Front } from 'components/Front';
+import { Heading } from 'components/generic/Heading';
 
 import style from './AboutUs.module.scss';
 
-import { Heading } from 'components/generic/Heading';
 import { Paragraph } from 'components/generic/Paragraph';
 import { MentorCard } from 'components/MentorCard';
+import { anchors } from 'components/NavBar/enums';
 import { ArrowTrident } from 'screens/AboutUs/ArrowTrident';
 
 export const AboutUs = memo(() => {
   return (
-    <div className={style.aboutUsWrapper}>
+    <section id={anchors.aboutUs} className={style.aboutUsWrapper}>
       <Heading level="h2">About Us</Heading>
       <div className={style.content}>
         <div className={style.mentors}>
@@ -57,6 +58,6 @@ export const AboutUs = memo(() => {
       <div className={style.frontEffect}>
         <Front />
       </div>
-    </div>
+    </section>
   );
 });

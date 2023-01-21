@@ -2,10 +2,11 @@ import React, { memo, useCallback, useState } from 'react';
 
 import { Accordion } from 'components/Accordion';
 import { Heading } from 'components/generic/Heading';
+import { Paragraph } from 'components/generic/Paragraph';
 
 import style from './Asks.module.scss';
 
-import { Paragraph } from 'components/generic/Paragraph';
+import { anchors } from 'components/NavBar/enums';
 import { accordionsData } from 'data/data';
 import { AskMark } from 'screens/Asks/AskMark/AskMark';
 import { ReturnComponent } from 'types';
@@ -39,7 +40,7 @@ export const Asks = memo((): ReturnComponent => {
   });
 
   return (
-    <div className={style.asksWrapper}>
+    <section id={anchors.questions} className={style.asksWrapper}>
       <Heading level="h2">Frequently Asked Questions</Heading>
       <div className={style.asksContent}>
         <div className={style.question}>
@@ -51,6 +52,6 @@ export const Asks = memo((): ReturnComponent => {
         </div>
         <div className={style.accordions}>{accordions}</div>
       </div>
-    </div>
+    </section>
   );
 });

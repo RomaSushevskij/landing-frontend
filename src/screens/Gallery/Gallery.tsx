@@ -8,7 +8,7 @@ import { ReturnComponent } from 'types';
 
 export const Gallery = memo((): ReturnComponent => {
   return (
-    <div className={style.galleryWrapper}>
+    <section className={style.galleryWrapper}>
       <Heading level="h2">Gallery</Heading>
       <Paragraph level="p1" customStyle={style.comment_1}>
         By the end of this course, you will be able to develop and publish your very own
@@ -26,6 +26,6 @@ export const Gallery = memo((): ReturnComponent => {
         beginner friendly. We will begin with the very basics of HTML and build a simple
         web page.
       </Paragraph>
-    </div>
+    </section>
   );
 });

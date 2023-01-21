@@ -3,10 +3,11 @@ import { memo } from 'react';
 import { Button } from 'components/generic/Button';
 import { Heading } from 'components/generic/Heading';
 import { Input } from 'components/generic/Input';
+import { Paragraph } from 'components/generic/Paragraph';
 
 import { yupResolver } from '@hookform/resolvers/yup';
 
-import { Paragraph } from 'components/generic/Paragraph';
+import { anchors } from 'components/NavBar/enums';
 
 import { useForm } from 'react-hook-form';
 
@@ -48,7 +49,7 @@ export const ContactUs = memo((): ReturnComponent => {
   };
 
   return (
-    <div className={style.contactsBorder}>
+    <section id={anchors.getInTouch} className={style.contactsBorder}>
       <Heading level="h2">Contact Us</Heading>
       <Paragraph level="p1" customStyle={style.formDescription}>
         Do you have any kind of help please contact with us.
@@ -75,6 +76,6 @@ export const ContactUs = memo((): ReturnComponent => {
           Send
         </Button>
       </form>
-    </div>
+    </section>
   );
 });
