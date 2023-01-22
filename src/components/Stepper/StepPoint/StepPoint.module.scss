@@ -65,6 +65,30 @@
   &.even {
     flex-direction: row-reverse;
   }
+
+  @media screen and (max-width: 1214px) {
+    justify-content: center;
+    margin-top: 24px;
+
+    .stepPoint, .connector, .arrow {
+      display: none;
+    }
+
+    .stepBlock {
+      .aggregate {
+        display: none;
+      }
+    }
+
+
+    &.even {
+      flex-direction: row;
+    }
+
+    .empty {
+      width: 0;
+    }
+  }
 }
 
 

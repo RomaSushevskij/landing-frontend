@@ -1,10 +1,11 @@
 import { Header } from 'components/Header';
 import { Substrate } from 'components/Substrate';
+import { AboutUs } from 'screens/AboutUs';
 
 import style from './App.module.scss';
 
-import { AboutUs } from 'screens/AboutUs';
 import { Main } from 'screens/Main';
+import { Steps } from 'screens/Steps';
 import { Technologies } from 'screens/Techhologies';
 import { ReturnComponent } from 'types';
 
@@ -17,7 +18,7 @@ const App = (): ReturnComponent => {
         <Main />
         <AboutUs />
         <Technologies />
-        {/* <Steps /> */}
+        <Steps />
         {/* <Asks /> */}
         {/* <Review /> */}
         {/* <Gallery /> */}

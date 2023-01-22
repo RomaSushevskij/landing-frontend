@@ -36,7 +36,7 @@ export const StepPoint = ({
     <div className={finalStepWrapperClassName}>
       <div className={style.stepCard}>
         <StepCard
-          stepNumber={2}
+          stepNumber={stepNumber}
           title={stepTitle}
           description={stepDescription}
           sideFrame={isEvenStepNumber ? 'left' : 'right'}

@@ -7,7 +7,6 @@
     max-width: 545px;
     margin: 0 auto;
     text-align: center;
-    font-size: 7.9vw;
   }
 
   p {
@@ -23,6 +22,7 @@
   }
 
   @media screen and (max-width: 1120px) {
+    width: 90vw;
 
     h2 {
       font-size: 40px;
