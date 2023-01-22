@@ -7,10 +7,10 @@
   flex-wrap: wrap;
   width: 70vw;
   justify-content: space-between;
+  gap: 48px;
 
   .logo {
     min-width: 169px;
-    margin-right: 48px;
   }
 
   .navigateBlock {
@@ -46,10 +46,8 @@
       }
     }
   }
-  @media screen and (max-width: 650px) {
 
-    .navigateBlock {
-      margin-top: 20px;
-    }
+  @media screen and (max-width: 650px) {
+    row-gap: 24px;
   }
 }
