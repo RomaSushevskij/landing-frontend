@@ -17,11 +17,12 @@
 
     .question {
       width: 496px;
+      min-height: 511px;
 
       .askMark {
         position: absolute;
         top: -890px;
-        left: -340px;
+        left: -350px;
       }
     }
 
@@ -36,4 +37,25 @@
     }
   }
 
+  @media screen and (max-width: 1225px) {
+    width: 90vw;
+
+    h2 {
+      font-size: 40px;
+    }
+
+    .asksContent {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .question {
+        text-align: center;
+
+        .askMark {
+          position: relative;
+          margin-bottom: -1850px;
+        }
+      }
+  }
+  }
 }
