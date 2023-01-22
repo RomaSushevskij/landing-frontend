@@ -1,16 +1,23 @@
 @import "src/styles/variables";
 
-.navbarWrapper {
+.headerWrapper {
   padding: 40px 0;
   margin: 0 auto;
   display: flex;
-  width: 1098px;
+  flex-wrap: wrap;
+  width: 70vw;
   justify-content: space-between;
+
+  .logo {
+    min-width: 169px;
+    margin-right: 48px;
+  }
 
   .navigateBlock {
     display: flex;
     align-items: center;
     gap: 48px;
+    white-space: nowrap;
 
     a {
       position: relative;
@@ -23,6 +30,26 @@
         color: $secondaryTextColor;
         transition: color .3s ease-in-out;
       }
+    }
+  }
+
+  @media screen and (max-width: 1055px) {
+    width: 90vw;
+    justify-content: center;
+
+    .navigateBlock {
+      gap: 20px;
+      flex-wrap: wrap;
+
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+  @media screen and (max-width: 650px) {
+
+    .navigateBlock {
+      margin-top: 20px;
     }
   }
 }

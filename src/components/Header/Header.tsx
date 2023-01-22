@@ -20,8 +20,10 @@ export const Header = memo(() => {
   };
 
   return (
-    <header className={style.navbarWrapper}>
-      <Logo />
+    <header className={style.headerWrapper}>
+      <div className={style.logo}>
+        <Logo />
+      </div>
       <nav className={style.navigateBlock}>
         <Paragraph level="p1">
           <a href={`#${anchors.aboutUs}`} onClick={onLinkClick}>
