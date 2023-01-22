@@ -5,7 +5,7 @@ import { Paragraph } from 'components/generic/Paragraph';
 
 import style from './Technologies.module.scss';
 
-import { anchors } from 'components/NavBar/enums';
+import { anchors } from 'components/Header/enums';
 import { TechnologyCard } from 'components/TechnologyCard';
 import { technologiesData } from 'data/data';
 import { ReturnComponent } from 'types';

@@ -4,7 +4,7 @@ import { Heading } from 'components/generic/Heading';
 
 import style from './Steps.module.scss';
 
-import { anchors } from 'components/NavBar/enums';
+import { anchors } from 'components/Header/enums';
 import { Stepper } from 'components/Stepper';
 import { stepsData } from 'data/data';
 import { ReturnComponent } from 'types';

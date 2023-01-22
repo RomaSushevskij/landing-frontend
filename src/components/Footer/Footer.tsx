@@ -14,7 +14,7 @@ import { ReturnComponent } from 'types';
 
 export const Footer = memo((): ReturnComponent => {
   return (
-    <div className={style.footer}>
+    <footer className={style.footer}>
       <div className={style.container}>
         <div className={style.address}>
           <Logo />
@@ -49,6 +49,6 @@ export const Footer = memo((): ReturnComponent => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 });

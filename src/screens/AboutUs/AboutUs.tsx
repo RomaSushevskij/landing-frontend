@@ -9,8 +9,8 @@ import { Heading } from 'components/generic/Heading';
 import style from './AboutUs.module.scss';
 
 import { Paragraph } from 'components/generic/Paragraph';
+import { anchors } from 'components/Header/enums';
 import { MentorCard } from 'components/MentorCard';
-import { anchors } from 'components/NavBar/enums';
 import { ArrowTrident } from 'screens/AboutUs/ArrowTrident';
 
 export const AboutUs = memo(() => {

@@ -10,7 +10,7 @@ import { ReturnComponent } from 'types';
 
 export const Main = memo((): ReturnComponent => {
   return (
-    <section className={style.mainWrapper}>
+    <main className={style.mainWrapper}>
       <Heading level="h1" customStyle={style.frontEnd}>
         Front-End
       </Heading>
@@ -27,6 +27,6 @@ export const Main = memo((): ReturnComponent => {
       <Heading level="h3" customStyle={style.courses}>
         Courses
       </Heading>
-    </section>
+    </main>
   );
 });

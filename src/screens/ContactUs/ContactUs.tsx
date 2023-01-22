@@ -7,7 +7,7 @@ import { Paragraph } from 'components/generic/Paragraph';
 
 import { yupResolver } from '@hookform/resolvers/yup';
 
-import { anchors } from 'components/NavBar/enums';
+import { anchors } from 'components/Header/enums';
 
 import { useForm } from 'react-hook-form';
 

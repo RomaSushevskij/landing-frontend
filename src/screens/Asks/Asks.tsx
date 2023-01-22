@@ -6,7 +6,7 @@ import { Paragraph } from 'components/generic/Paragraph';
 
 import style from './Asks.module.scss';
 
-import { anchors } from 'components/NavBar/enums';
+import { anchors } from 'components/Header/enums';
 import { accordionsData } from 'data/data';
 import { AskMark } from 'screens/Asks/AskMark/AskMark';
 import { ReturnComponent } from 'types';

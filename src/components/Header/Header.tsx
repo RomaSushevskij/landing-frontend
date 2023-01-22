@@ -1,12 +1,11 @@
 import { memo, MouseEvent } from 'react';
 
-import style from './NavBar.module.scss';
-
 import { Paragraph } from 'components/generic/Paragraph';
+import { anchors } from 'components/Header/enums';
+import style from 'components/Header/Header.module.scss';
 import { Logo } from 'components/icons/Logo';
-import { anchors } from 'components/NavBar/enums';
 
-export const NavBar = memo(() => {
+export const Header = memo(() => {
   const onLinkClick = (event: MouseEvent<HTMLAnchorElement>): void => {
     event.preventDefault();
     const anchor = event.currentTarget.getAttribute('href');
@@ -21,7 +20,7 @@ export const NavBar = memo(() => {
   };
 
   return (
-    <div className={style.navbarWrapper}>
+    <header className={style.navbarWrapper}>
       <Logo />
       <nav className={style.navigateBlock}>
         <Paragraph level="p1">
@@ -50,6 +49,6 @@ export const NavBar = memo(() => {
           </a>
         </Paragraph>
       </nav>
-    </div>
+    </header>
   );
 });
