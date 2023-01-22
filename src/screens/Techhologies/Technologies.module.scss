@@ -7,6 +7,7 @@
     max-width: 545px;
     margin: 0 auto;
     text-align: center;
+    font-size: 7.9vw;
   }
 
   p {
@@ -17,6 +18,18 @@
 
   .technologies {
     display: flex;
+    flex-wrap: wrap;
     gap: 25px;
+  }
+
+  @media screen and (max-width: 1120px) {
+
+    h2 {
+      font-size: 40px;
+    }
+
+    .technologies {
+      justify-content: center;
+    }
   }
 }

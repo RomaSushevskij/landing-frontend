@@ -5,6 +5,7 @@ import style from './App.module.scss';
 
 import { AboutUs } from 'screens/AboutUs';
 import { Main } from 'screens/Main';
+import { Technologies } from 'screens/Techhologies';
 import { ReturnComponent } from 'types';
 
 const App = (): ReturnComponent => {
@@ -15,7 +16,7 @@ const App = (): ReturnComponent => {
         <Header />
         <Main />
         <AboutUs />
-        {/* <Technologies /> */}
+        <Technologies />
         {/* <Steps /> */}
         {/* <Asks /> */}
         {/* <Review /> */}
