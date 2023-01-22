@@ -1,4 +1,5 @@
 import { Effects } from 'components/Effects/Effects';
+import { Footer } from 'components/Footer';
 import { Header } from 'components/Header';
 import { Substrate } from 'components/Substrate';
 import { AboutUs } from 'screens/AboutUs';
@@ -28,7 +29,7 @@ const App = (): ReturnComponent => {
         <Review />
         <Gallery />
         <ContactUs />
-        {/* <Footer /> */}
+        <Footer />
         <Effects />
       </div>
     </div>

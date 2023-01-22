@@ -10,7 +10,11 @@
   .container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+
     .address {
+      min-width: max-content;
+
       p:nth-child(2) {
         margin-top: 24px;
       }
@@ -43,6 +47,7 @@
         display: flex;
         gap: 26px;
         margin-top: 25px;
+        min-width: max-content;
       }
     }
 
@@ -51,6 +56,52 @@
       font-size: 18px;
       font-weight: 700;
       line-height: 21px;
+    }
+  }
+
+  @media screen and (max-width: 1854px) {
+
+    .container {
+      .socialMedia {
+        margin-top: 24px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 854px) {
+    .container {
+      .company {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 703px) {
+    .container {
+      .company {
+        .links {
+          column-gap: 24px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 570px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+
+      .address {
+        margin: 0 auto;
+        text-align: center;
+
+        svg {
+          margin: 0 auto;
+        }
+      }
+
+      .company {
+        margin-top: 24px;
+      }
     }
   }
 }
