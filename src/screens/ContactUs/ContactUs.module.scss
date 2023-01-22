@@ -48,4 +48,27 @@
       }
     }
   }
+
+  @media screen and (max-width: 1230px) {
+    width: 90vw;
+    padding: 56px 0;
+
+    .formDescription {
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: 40px;
+    }
+
+    form {
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width: 676px) {
+    form {
+      width: 82%;
+    }
+  }
 }

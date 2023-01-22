@@ -3,6 +3,7 @@ import { Header } from 'components/Header';
 import { Substrate } from 'components/Substrate';
 import { AboutUs } from 'screens/AboutUs';
 import { Asks } from 'screens/Asks';
+import { ContactUs } from 'screens/ContactUs';
 import { Gallery } from 'screens/Gallery';
 import { Main } from 'screens/Main';
 import { Review } from 'screens/Review';
@@ -26,7 +27,7 @@ const App = (): ReturnComponent => {
         <Asks />
         <Review />
         <Gallery />
-        {/* <ContactUs /> */}
+        <ContactUs />
         {/* <Footer /> */}
         <Effects />
       </div>
