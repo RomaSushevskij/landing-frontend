@@ -5,27 +5,29 @@
 
   h2 {
     text-align: center;
+    font-size: 7.9vw;
   }
 
   .content {
     margin-top: 56px;
     display: flex;
+    flex-wrap: wrap;
 
     .mentors {
       position: relative;
 
       h3 {
         text-align: center;
-        margin-bottom: 168px;;
+        margin-bottom: 168px;
       }
 
       .mentorCards {
         display: flex;
+        flex-wrap: wrap;
         gap: 23px;
 
         .arrowTrident {
           width: 396px;
-
           position: absolute;
           top: 50px;
           left: 50%;
@@ -50,7 +52,7 @@
     }
 
     .descriptions {
-      width: 486px;
+      max-width: 486px;
       margin-top: 109px;
       margin-left: 24px;
     }
@@ -60,5 +62,43 @@
     position: absolute;
     left: 70%;
     top: 420px;
+  }
+
+  @media screen and (max-width: 1120px) {
+    width: 80vw;
+
+    h2 {
+      font-size: 56px;
+    }
+
+    .content {
+      justify-content: center;
+      .mentors {
+        position: relative;
+
+        h3 {
+          text-align: center;
+          margin-bottom: 68px;
+          text-align: center;
+        }
+
+        .mentorCards {
+          justify-content: center;
+          gap:48px;
+
+          .arrowTrident {
+            display: none;
+          }
+
+          .mentorCard:nth-child(3) {
+            margin-top: 0;
+          }
+        }
+      }
+      .descriptions {
+        margin-top: 68px;
+        margin-left: 0;
+      }
+    }
   }
 }
