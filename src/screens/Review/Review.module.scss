@@ -10,6 +10,7 @@
 
   .reviewContent {
     display: flex;
+    flex-wrap: wrap;
 
     .descriptions {
       max-width: 392px;
@@ -42,6 +43,28 @@
 
       &[type='active'] {
         transform: scale(1.46, 1.46) translate(-16.5%, -13.5%);
+      }
+    }
+  }
+
+
+  @media screen and (max-width: 1230px) {
+    max-width: 90vw;
+    h2 {
+      font-size: 40px;
+    }
+
+    .reviewContent {
+      justify-content: center;
+
+      .descriptions {
+        max-width: 100%;
+        margin: 0 0 24px 0;
+
+        h4 {
+          margin-bottom: 24px;
+          text-align: center;
+        }
       }
     }
   }

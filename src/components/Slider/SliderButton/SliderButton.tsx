@@ -9,10 +9,13 @@ import { ReturnComponent } from 'types';
 
 export const SliderButton = memo(
   ({ direction, onClick, disabled }: SliderButtonProps): ReturnComponent => {
+    const finalBntClassName =
+      direction === 'next' ? `${style.btnWrapper} ${style.next}` : style.btnWrapper;
+
     return (
       <button
         type="button"
-        className={style.btnWrapper}
+        className={finalBntClassName}
         onClick={onClick}
         disabled={disabled}
       >

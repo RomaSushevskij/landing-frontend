@@ -51,5 +51,17 @@
     background: $blockBackgroundColor;
     z-index: 1;
   }
+
+  @media screen and (max-width: 905px) {
+    svg {
+      transform: rotate(270deg);
+    }
+
+    &.next {
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
 }
 
